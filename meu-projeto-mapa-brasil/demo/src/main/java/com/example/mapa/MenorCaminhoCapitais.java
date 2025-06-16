@@ -19,13 +19,18 @@ public class MenorCaminhoCapitais {
             scanner.nextLine(); // Consumir nova linha
 
             switch (opcao) {
-                case 1 -> calcularMenorCaminho();
-                case 2 -> listarCapitais();
-                case 3 -> {
+                case 1:
+                    calcularMenorCaminho();
+                    break;
+                case 2:
+                    listarCapitais();
+                    break;
+                case 3:
                     System.out.println("Saindo do sistema...");
                     return;
-                }
-                default -> System.out.println("Opção inválida. Tente novamente.");
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
             }
         }
     }
@@ -137,6 +142,7 @@ private static void calcularMenorCaminho() {
     // Norte
     grafoCapitais.adicionarAresta("Porto Velho", "Manaus", 901);
     grafoCapitais.adicionarAresta("Manaus", "Boa Vista", 785);
+    grafoCapitais.adicionarAresta("Manaus", "Belem", 1500);
 
     grafoCapitais.adicionarAresta("Manaus", "Macapa", 1500); // via balsa/barco1
 
